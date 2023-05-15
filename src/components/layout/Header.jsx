@@ -7,8 +7,11 @@ const Header = () => {
   const dispatch = useDispatch();
   const { token } = useSelector((store) => store.userInfo);
 
-  const { products } = useSelector( (store) => store.cart)
-  const totalOfProducts = products.reduce( (acc , curr) => (curr.quantity)+ acc , 0)
+  const { products } = useSelector((store) => store.cart);
+  const totalOfProducts = products.reduce(
+    (acc, curr) => curr.quantity + acc,
+    0
+  );
 
   const navigate = useNavigate();
   const handleClickShowCart = () => {
@@ -26,7 +29,7 @@ const Header = () => {
         </Link>
         <div className="grid grid-cols-4 place-self-end text-4xl gap-[1px] bg-gray-300 mx-auto sm:m-0">
           <Link to="/products" className="text-center bg-white w-[100px]">
-            <i className='bx bx-shopping-bag'></i>
+            <i className="bx bx-shopping-bag"></i>
           </Link>
           <Link to="/login" className="text-center bg-white w-[100px]">
             <i className="bx bx-user"></i>
@@ -34,11 +37,16 @@ const Header = () => {
           <Link to="/purchases" className="text-center bg-white w-[100px]">
             <i className="bx bx-box"></i>
           </Link>
-          <button onClick={handleClickShowCart} className="text-center bg-white w-[100px] relative">
+          <button
+            onClick={handleClickShowCart}
+            className="text-center bg-white w-[100px] relative"
+          >
             <i className="bx bx-cart"></i>
-            <span className="absolute aspect-square w-[25px] left-[20%] bottom-0
-             text-white bg-red-600 rounded-full text-base flex justify-center items-center">
-              {totalOfProducts == 0 ? "+" : totalOfProducts }
+            <span
+              className="absolute aspect-square w-[25px] left-[20%] bottom-0
+             text-white bg-red-600 rounded-full text-base flex justify-center items-center"
+            >
+              {totalOfProducts == 0 ? "+" : totalOfProducts}
             </span>
           </button>
         </div>

@@ -80,12 +80,12 @@ const Products = () => {
   
 
   return (
-    <main className='p-3 pt-[115px] sm:pt-[70px] Home grid grid-rows-[auto,:1fr] w-full sm:grid-rows-1 sm:grid-cols-[auto,_1fr] max-w-[1200px] m-auto'>
-      <form onSubmit={hanldeSubmit} className='py-6 px-2'>
-        <div>
-          <input className='outline-none border-b border-gray-300'
+    <main className='pt-[115px] sm:pt-[70px] my-[60px] Home grid grid-rows-[auto,:1fr] w-full sm:grid-rows-1 sm:grid-cols-[auto,_1fr] m-auto px-3 max-w-[1200px] gap-5'>
+      <form onSubmit={hanldeSubmit} className='bg-gray-200/20 p-3'>
+        <div className='py-[20px] flex gap-2'>
+          <input className='outline-none p-1 flex-grow shadow-md shadow-black/10'
            id='productName' placeholder='What are u looking for' type="text" />
-          <button><i className='bx bx-search'></i></button>
+          <button className='aspect-square w-[40px]'><i className='bx bx-search'></i></button>
         </div>
         <ul>
           <li className='cursor-pointer' onClick={handleClickCategory} data-category={0}>All</li>
@@ -95,7 +95,7 @@ const Products = () => {
           }
         </ul>
       </form>
-      <section className='grid gap-8 py-6 grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))]'>
+      <section className='grid gap-8 grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))]'>
         {
           products?.map( (product)=> <ProductCard key={product.id} product={product} />)
         }
