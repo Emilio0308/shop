@@ -18,10 +18,10 @@ const SimilarProducts = ( { categoryId , productId } ) => {
     }, [categoryId, productId])
     
   return (
-    <section className='w-full'>
+    <section className='w-full flex flex-col gap-8'>
         <h2 className='text-xl text-red-600'>Discover Similar Products</h2>
 
-        <section className='grid gap-10 py-6 grid-cols-[repeat(auto-fill,_minmax(270px,_1fr))] mx-auto pl-8'>
+        <section className='grid gap-10 grid-cols-[repeat(auto-fill,_minmax(270px,_1fr))]'>
             {
                 similarProducts?.map( product => <ProductCard product={product} key={product.id} />)
             }

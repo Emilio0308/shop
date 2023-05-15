@@ -200,7 +200,7 @@ const Home = () => {
             <i className="bx bx-right-arrow-alt"></i>
           </Link>
         </article>
-        <div className="w-full h-full relative border-[2px] border-black min-h-[350px]">
+        <div className="w-full h-full relative border-[2px] border-black min-h-[400px]">
           <img
             className="w-full h-full object-cover"
             src="/home/products/laptop2.jpg"

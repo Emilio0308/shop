@@ -67,7 +67,7 @@ const ProductDetail = () => {
   }, [id]);
   
   return (
-    <section className="w-full max-w-[1200px] m-auto pt-[40px]">
+    <section className="w-full max-w-[1200px] m-auto p-3 pt-[115px] sm:pt-[70px] my-[60px]">
       <section className="flex gap-3 items-center">
         <Link to="/">Home</Link>
         <div className="h-[7px] aspect-square bg-red-500 rounded-full"></div>
@@ -75,6 +75,7 @@ const ProductDetail = () => {
           {productData?.title}
         </span>
       </section>
+
       <section className="grid gap-10 sm:grid-cols-2 max-w-[1024px] mx-auto">
         <section className="relative overflow-hidden min-h-[300px]">
           <section className={`flex w-[300%] top-[50%] translate-y-[-50%] transition-opacity absolute ${positionImage[position]}`}>
@@ -161,6 +162,7 @@ const ProductDetail = () => {
           </button>
         </section>
       </section>
+
       <SimilarProducts
         productId={productData?.id}
         categoryId={productData?.categoryId}
