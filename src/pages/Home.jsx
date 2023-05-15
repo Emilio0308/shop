@@ -182,7 +182,8 @@ const Home = () => {
       <h3 className="text-3xl text-red-500 px-8 my-[40px] tracking-[4px]">
         PCs & LAPTOPS
       </h3>
-      <section className="grid grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] sm:grid-cols-2 gap-5 pb-[50px]">
+
+      <section className="grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] sm:grid-cols-2 gap-5 pb-[50px] p-3">
         <article className="w-full border-[2px] border-gray-400 p-5 flex flex-col gap-5">
           <div className="flex-grow p-3">
             <img
@@ -199,7 +200,7 @@ const Home = () => {
             <i className="bx bx-right-arrow-alt"></i>
           </Link>
         </article>
-        <div className="w-full h-full relative border-[2px] border-black">
+        <div className="w-full h-full relative border-[2px] border-black min-h-[350px]">
           <img
             className="w-full h-full object-cover"
             src="/home/products/laptop2.jpg"
