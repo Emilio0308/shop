@@ -6,7 +6,7 @@ const Footer = () => {
       <section className="w-full max-w-[1200px] grid grid-rows-[1fr,_50px,_30px] p-3 mx-auto gap-6">
         <article className="w-full h-full grid grid-rows-3 gap-6 sm:grid-cols-3 sm:grid-rows-1 justify-items-center">
           <div>
-            <span className="text-xl font-medium">Links</span>
+            <h4 className="text-xl font-medium">Links</h4>
             <ul className="grid">
               <Link to="/" className="w-[100px] hover:underline">
                 Home
@@ -23,7 +23,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <span className="text-xl font-medium">Info</span>
+            <h4 className="text-xl font-medium">Info</h4>
             <ul>
               <li className="cursor-pointer hover:underline">Privacy Policy</li>
               <li className="cursor-pointer hover:underline">Returns</li>
@@ -32,7 +32,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="w-[100px]">
-            <span className="text-xl font-medium">E-comerce</span>
+            <h4 className="text-xl font-medium">E-comerce</h4>
           </div>
         </article>
         <div className="flex justify-center items-center gap-5">

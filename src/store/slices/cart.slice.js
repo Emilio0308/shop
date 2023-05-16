@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { axiosEcommerce, getConfig } from "../../utils/configAxios";
+import Swal from "sweetalert2";
 
 const initialState = {
     products: [],
@@ -30,8 +31,43 @@ export const getCartProduct = () => (dispatch) => {
 }
 export const addProductCart = (data) => (dispatch) => {
     axiosEcommerce.post("cart", data , getConfig())
-    .then( () => dispatch( getCartProduct() ) )
-    .catch( (err) => console.log(err))
+    .then( () => {
+        dispatch( getCartProduct() ) 
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          Toast.fire({
+            icon: 'success',
+            title: 'product add'
+          })
+    })
+    .catch( (err) => {
+        console.log(err)
+        const added = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          added.fire({
+            icon: 'error',
+            title: 'the product has already been added to the cart'
+          })
+
+    })
 }
 
 export const deleteProductCart = (id) => (dispatch) => {
@@ -42,7 +78,19 @@ export const deleteProductCart = (id) => (dispatch) => {
 
 export const purchaseCart = () => (dispatch) => {
     axiosEcommerce.post( "purchases" ,{}, getConfig())
-    .then( () => dispatch( getCartProduct() ) )
+    .then( () => {
+        dispatch( getCartProduct() ) 
+        const purchase = Swal.mixin({
+            showConfirmButton: false,
+            timer: 1000,
+            timerProgressBar: true,
+          })
+          purchase.fire({
+            icon: 'success',
+            title: 'Successful purchase'
+          })
+
+    })
     .catch( (err) => console.log(err))
 }
 
