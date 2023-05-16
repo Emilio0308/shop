@@ -16,7 +16,6 @@ const Home = () => {
   const stoves = allProducts?.filter(
     (product) => product.category.name === "Stoves"
   );
-  console.log(stoves);
   useEffect(() => {
     axiosEcommerce
       .get("products")
@@ -46,10 +45,16 @@ const Home = () => {
                 SAMSUNG GALAXY BOOK PRO
               </h1>
             </div>
-            <div className="h-full w-full absolute row-start-2 sm:row-start-1  sm:col-start-2 bottom-[25%] sm:right-[15%] sm:bottom-0">
+            <div className="h-full w-full absolute row-start-2 sm:row-start-1  sm:col-start-2 bottom-[25%] sm:right-[15%] sm:bottom-0 group">
               <img
-                className="h-full sm:w-full object-contain z-0 m-auto"
+                className="h-full sm:w-full object-contain z-0 m-auto group-hover:invisible transition-opacity"
                 src="/home/mainproduct2.png"
+                alt="Main product Image"
+              />
+              <img
+                className="h-full sm:w-full object-contain z-0 m-auto invisible transition-opacity
+                 absolute top-[50%] translate-y-[-50%] left-[55%] translate-x-[-50%] group-hover:visible"
+                src="/home/mainproduct.png"
                 alt="Main product Image"
               />
             </div>
