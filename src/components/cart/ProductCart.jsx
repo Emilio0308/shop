@@ -9,7 +9,21 @@ const ProductCart = ({ product }) => {
   const dispatch = useDispatch();
 
   const handleClickDelete = () => {
-    dispatch(deleteProductCart(product.id));
+    const comfirmate = Swal.mixin({
+        toast:true,
+        iconColor: "red",
+        showConfirmButton: true,
+        confirmButtonColor: "green",
+        showDenyButton: true,
+        denyButtonColor: "red",
+      });
+
+      comfirmate.fire({
+        title: "Are you sure to Delete this product",
+        icon: "warning",
+      }).then((res) => { if (res.value) {
+        dispatch(deleteProductCart(product.id))
+      }});
   };
   const hanldeClickPlusCartProduct = () => {
     const newQuantity = product.quantity + 1;
@@ -21,8 +35,7 @@ const ProductCart = ({ product }) => {
       dispatch(updateCartProduct(product.id, { quantity: newQuantity }));
     } else {
       const comfirmate = Swal.mixin({
-        title: "Are you sure to Delete this product",
-        icon: "warning",
+        toast:true,
         iconColor: "red",
         showConfirmButton: true,
         confirmButtonColor: "green",
@@ -30,25 +43,26 @@ const ProductCart = ({ product }) => {
         denyButtonColor: "red",
       });
 
-      comfirmate.fire({}).then((res) => {
-        if (res.value) {
-          handleClickDelete();
-        }
-      });
+      comfirmate.fire({
+        title: "Are you sure to Delete this product",
+        icon: "warning",
+      }).then((res) => { if (res.value) {
+        dispatch(deleteProductCart(product.id))
+      }});
     }
   };
 
   return (
     <article className="border-[1px] border-gray-400 shadow-md shadow-gray-900/20">
       <section className="grid grid-cols-[auto,_1fr,_auto] grid-rows-2 gap-[1px] bg-gray-400">
-        <div className="h-[90px] aspect-square row-span-2 bg-white relative group">
+        <div className="h-full row-span-2 bg-white relative group flex justify-center items-center">
           <img
-            className="w-full h-full object-contain group-hover:opacity-0"
+            className="h-[90px] aspect-square object-contain group-hover:opacity-0"
             src={product.product.images[0].url}
             alt=""
           />
           <img
-            className="w-full h-full object-contain group-hover:opacity-100 opacity-0 absolute top-0"
+            className="h-[90px] aspect-square object-contain group-hover:opacity-100 opacity-0 absolute top-0"
             src={product.product.images[2].url}
             alt=""
           />

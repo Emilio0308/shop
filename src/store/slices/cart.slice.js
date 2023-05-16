@@ -72,7 +72,9 @@ export const addProductCart = (data) => (dispatch) => {
 
 export const deleteProductCart = (id) => (dispatch) => {
     axiosEcommerce.delete(`cart/${id}`, getConfig())
-    .then( () => dispatch( getCartProduct() ) )
+    .then( () => {
+        dispatch( getCartProduct() ) 
+    })
     .catch( (err) => console.log(err))
 }
 

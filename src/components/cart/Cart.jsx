@@ -29,7 +29,7 @@ const Cart = () => {
   
   return (
     <section
-      className={`fixed bg-white h-[calc(100vh-115px)] w-[270px] p-3 sm:w-[380px] top-[115px] sm:top-[70px] sm:h-[calc(100vh-70px)]
+      className={`fixed z-50 bg-white h-[calc(100vh-115px)] w-[270px] p-3 sm:w-[380px] top-[115px] sm:top-[70px] sm:h-[calc(100vh-70px)]
       shadow-xl ${isShowCart && token ? "right-0" : "right-[-100%]"} duration-200 grid grid-rows-[auto,_1fr,_auto]`}
     >
       <h2 className="text-red-600 font-medium text-xl tracking-[3px]">Shopping Cart</h2>
