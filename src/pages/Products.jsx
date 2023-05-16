@@ -100,7 +100,7 @@ const Products = () => {
         <div className="relative">
           <button onClick={ () => setShowCategories(!showCategories) } className="tracking-widest h-[30px] flex justify-center items-center">
             CATEGORIES
-            <i class={`${showCategories?  "bx bx-chevron-up" : "bx bx-chevron-down"} text-2xl`}></i>
+            <i className={`${showCategories?  "bx bx-chevron-up" : "bx bx-chevron-down"} text-2xl`}></i>
             
           </button>
           <ul className={`menu-list transition-max-height duration-300 ease-in-out overflow-hidden ${showCategories ? 'max-h-36' : 'max-h-0'}`}>

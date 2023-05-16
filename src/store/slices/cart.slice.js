@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { axiosEcommerce, getConfig } from "../../utils/configAxios";
 import Swal from "sweetalert2";
+import { useSelector } from "react-redux";
 
 const initialState = {
     products: [],
@@ -64,7 +65,7 @@ export const addProductCart = (data) => (dispatch) => {
           })
           added.fire({
             icon: 'error',
-            title: 'the product has already been added to the cart'
+            title: `${ err.response.data == "Forbidden"? "you have to be log in" : err.response.data.error }`
           })
 
     })
