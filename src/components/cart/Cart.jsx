@@ -32,7 +32,7 @@ const Cart = () => {
       className={`fixed z-50 bg-white h-[calc(100vh-115px)] w-[270px] p-3 sm:w-[380px] top-[115px] sm:top-[70px] sm:h-[calc(100vh-70px)]
       shadow-xl ${isShowCart && token ? "right-0" : "right-[-100%]"} duration-200 grid grid-rows-[auto,_1fr,_auto]`}
     >
-      <h2 className="text-red-600 font-medium text-xl tracking-[3px]">Shopping Cart</h2>
+      <h2 className="text-red-600 font-medium text-xl tracking-[3px] my-[15px]">Shopping Cart</h2>
       <i onClick={handleClose} className='bx bx-x absolute top-2 right-3 text-xl cursor-pointer'></i>
       {/* losproductos */}
       <section className="overflow-y-auto grid gap-3 py-4 content-start">
@@ -41,7 +41,7 @@ const Cart = () => {
         }
       </section>
       {/* checkout */}
-      <section className="grid grid-cols-2 gap-5">
+      <section className="grid grid-cols-2 gap-5 mb-5 border-t-2 border-gray-400 pt-5">
         <span>total</span>
         <h4>$ {totalPrice}</h4>
         <button onClick={handleClickCheckout} className="w-full bg-red-500 py-2 text-white col-span-2">

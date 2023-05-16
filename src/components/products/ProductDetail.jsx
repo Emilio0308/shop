@@ -85,7 +85,7 @@ const ProductDetail = () => {
               <img
                 className="max-h-[300px] w-full object-contain"
                 src={productData?.images[0].url}
-                alt=""
+                alt="Product first img"
               />
             </div>
             <div
@@ -94,7 +94,7 @@ const ProductDetail = () => {
               <img
                 className="max-h-[300px] w-full object-contain"
                 src={productData?.images[1].url}
-                alt=""
+                alt="Product second img"
               />
             </div>
             <div
@@ -103,7 +103,7 @@ const ProductDetail = () => {
               <img
                 className="max-h-[300px] w-full object-contain"
                 src={productData?.images[2].url}
-                alt=""
+                alt="Product third img"
               />
             </div>
           </section>
@@ -111,13 +111,13 @@ const ProductDetail = () => {
               onClick={hanldeClickPrev}
               className="absolute top-[50%] translate-y-[-50%] text-3xl left-0 w-[30px] aspect-square"
             >
-              {"<"}
+              <i class='bx bx-chevron-left text-red-600' ></i>
           </button>
           <button
               onClick={hanldeClickNext}
               className="absolute top-[50%] translate-y-[-50%] text-3xl right-0 w-[30px] aspect-square"
             >
-              {">"}
+              <i className='bx bx-chevron-right text-red-600'></i>
           </button>
         </section>
         <section className="grid gap-4 p-8">

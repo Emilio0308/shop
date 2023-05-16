@@ -50,7 +50,7 @@ const Home = () => {
               <img
                 className="h-full sm:w-full object-contain z-0 m-auto"
                 src="/home/mainproduct2.png"
-                alt=""
+                alt="Main product Image"
               />
             </div>
           </div>
@@ -61,33 +61,30 @@ const Home = () => {
             </div>
             <div className="w-full bg-gray-100 h-full p-3 text-center flex flex-col justify-center items-center">
               <div>
-                {" "}
                 <img
                   className="w-[50px] m-auto"
                   src="/home/mainproduct/img.svg"
-                  alt=""
+                  alt="main product"
                 />
               </div>
               <span>2-in-1 Convertible Design</span>
             </div>
             <div className="w-full bg-gray-100 h-full p-3 text-center flex flex-col justify-center items-center">
               <div>
-                {" "}
                 <img
                   className="w-[50px] m-auto"
                   src="/home/mainproduct/img2.svg"
-                  alt=""
+                  alt="Convertible Design"
                 />
               </div>
               <span>Stunning Display</span>
             </div>
             <div className="w-full bg-gray-100 h-full p-3 text-center flex flex-col justify-center items-center">
               <div>
-                {" "}
                 <img
                   className="w-[50px] m-auto"
                   src="/home/mainproduct/img3.svg"
-                  alt=""
+                  alt="S-Pen image"
                 />
               </div>
               <span>S-Pen</span>
@@ -95,7 +92,7 @@ const Home = () => {
           </div>
         </article>
         <div className="w-full flex justify-center items-center my-[100px]">
-          <img src="/home/industry.png" alt="" />
+          <img src="/home/industry.png" alt="industry image" />
         </div>
       </section>
 
@@ -125,13 +122,13 @@ const Home = () => {
               domwload="lazy"
               className="w-full h-full  object-cover object-bottom sm:invisible"
               src="/home/slider/tv1movil.jpg"
-              alt=""
+              alt="LG Tv"
             />
             <img
               domwload="lazy"
               className="w-full h-full  object-cover object-right invisible sm:visible absolute bottom-0"
               src="/home/slider/tv1.jpg"
-              alt=""
+              alt="LG Tv"
             />
             <span className="text-[6vw] w-[80%] absolute left-[10%] top-[20%] sm:text-[4vw]  sm:w-[40%] sm:top-[50%] sm:translate-y-[-50%] text-white">
               Take your gaming experience to the next level
@@ -142,13 +139,13 @@ const Home = () => {
               domwload="lazy"
               className="w-full h-full  object-cover object-bottom sm:invisible"
               src="/home/slider/tv3movil.jpg"
-              alt=""
+              alt="TV neo Q led"
             />
             <img
               domwload="lazy"
               className="w-full h-full  object-cover invisible sm:visible absolute top-0 object-right"
               src="/home/slider/tv3.jpg"
-              alt=""
+              alt="TV neo Q led"
             />
           </div>
           <div className="w-[calc(100%/3)] h-full relative">
@@ -156,13 +153,13 @@ const Home = () => {
               domwload="lazy"
               className="w-full h-full  object-cover sm:invisible"
               src="/home/slider/tv2movil.jpg"
-              alt=""
+              alt="Samsung tv"
             />
             <img
               domwload="lazy"
               className="w-full h-full  object-cover invisible sm:visible absolute top-0 object-left"
               src="/home/slider/tv2.jpeg"
-              alt=""
+              alt="Samsung tv"
             />
           </div>
         </div>
@@ -189,7 +186,7 @@ const Home = () => {
             <img
               src="/home/products/pc.png"
               className="h-full object-contain m-auto"
-              alt=""
+              alt="Pc gamer"
             />
           </div>
           <Link
@@ -204,7 +201,7 @@ const Home = () => {
           <img
             className="w-full h-full object-cover"
             src="/home/products/laptop2.jpg"
-            alt=""
+            alt="Apple laptop"
           />
           <Link
             to="/products/4"
@@ -241,7 +238,7 @@ const Home = () => {
               domwload="lazy"
               className="mx-auto h-[60px] sm:h-auto"
               src="/home/utils/Shipping.png"
-              alt=""
+              alt="Shipping"
             />
             <div>
               <h4 className="text-center font-medium text-xl">Free Shipping</h4>
@@ -266,7 +263,7 @@ const Home = () => {
               domwload="lazy"
               className="mx-auto h-[60px] sm:w-[128px] sm:h-[136px]"
               src="/home/utils/scheduling.png"
-              alt=""
+              alt="scheduling"
             />
             <div>
               <h4 className="text-center font-medium text-xl">

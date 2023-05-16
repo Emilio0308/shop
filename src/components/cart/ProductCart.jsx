@@ -10,7 +10,6 @@ const ProductCart = ({ product }) => {
 
   const handleClickDelete = () => {
     const comfirmate = Swal.mixin({
-        toast:true,
         iconColor: "red",
         showConfirmButton: true,
         confirmButtonColor: "green",
@@ -35,7 +34,6 @@ const ProductCart = ({ product }) => {
       dispatch(updateCartProduct(product.id, { quantity: newQuantity }));
     } else {
       const comfirmate = Swal.mixin({
-        toast:true,
         iconColor: "red",
         showConfirmButton: true,
         confirmButtonColor: "green",
@@ -59,12 +57,12 @@ const ProductCart = ({ product }) => {
           <img
             className="h-[90px] aspect-square object-contain group-hover:opacity-0"
             src={product.product.images[0].url}
-            alt=""
+            alt="Product Cart image"
           />
           <img
             className="h-[90px] aspect-square object-contain group-hover:opacity-100 opacity-0 absolute top-0"
             src={product.product.images[2].url}
-            alt=""
+            alt="Product Cart image"
           />
         </div>
         <h4 className="flex justify-center items-center text-sm bg-white">

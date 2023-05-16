@@ -19,8 +19,8 @@ const ProductCard = ( { product } ) => {
   return (
     <Link to={`/products/${product.id}`} className='border-[1px] border-gray-300 rounded-md grid shadow-md shadow-slate-800/30'>
         <div className='p-4 border-b-[1px] bg-white border-gray-300 h-[200px] flex justify-center items-center relative group'>
-            <img domwload="lazy" className='w-full h-full object-contain group-hover:opacity-0 transition-opacity' src={product.images[0].url} alt="" />
-            <img domwload="lazy" className='w-full h-full object-contain opacity-0 absolute hover:opacity-100 transition-opacity' src={product.images[1].url} alt="" />
+            <img domwload="lazy" className='w-full h-full object-contain group-hover:opacity-0 transition-opacity' src={product.images[0].url} alt="product image" />
+            <img domwload="lazy" className='w-full h-full object-contain opacity-0 absolute hover:opacity-100 transition-opacity' src={product.images[1].url} alt="product image" />
         </div>
         <section className='p-4 relative grid'>
             <h4 className='text-gray-400 font-bold'>{product.brand}</h4>

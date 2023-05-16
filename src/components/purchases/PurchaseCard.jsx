@@ -6,7 +6,7 @@ const PurchaseCard = ( { purchase } ) => {
     <article className='grid grid-cols-2 text-sm sm:text-base p-2 min-h-[80px]'>
         <section className='flex items-center gap-2'>
             <div className='h-full aspect-square flex justify-center items-center max-w-[50px]'>
-                <img className='object-contain aspect-square' loading='lazy' src={purchase.product.images[0].url} alt="" />
+                <img className='object-contain aspect-square' loading='lazy' src={purchase.product.images[0].url} alt="product purchase image" />
             </div>
             <h4>{purchase.product.title}</h4>
         </section>
