@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <section className="w-full pt-[115px] sm:pt-[70px] mt-[50px]">
       <section className="w-full max-w-[1200px] mx-auto min-h-screen p-3">
-        <article className="flex flex-col bg-gray-100 rounded-2xl p-5">
+        <article className="flex flex-col bg-gray-100 rounded-2xl p-5 shadow-sm shadow-black/50">
           <div className="w-full grid-rows-[60%,_40%] sm:grid-cols-[60%,_40%] sm:grid-rows-1 h-[50vh] relative grid">
             <div className="h-full relative z-10 grid justify-center items-center">
               <h1 className="text-3xl uppercase font-semibold sm:text-4xl md:text-[50px] text-red-600">
